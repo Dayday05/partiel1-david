@@ -1,0 +1,30 @@
+package fr.formation.partiel1Controller;
+
+import java.util.*;
+
+import javax.ws.rs.*;
+import javax.ws.rs.core.*;
+
+import fr.formation.partiel1.entities.Account;
+
+@SuppressWarnings("javadoc")
+@Path("/transfer")
+
+public class TransferController {
+
+    private final static Map<String, Account> TRANSFERS = new HashMap<>();
+    static {
+//	TRANSFERS.put("fr", buildFrance());
+//	TRANSFERS.put("gb", buildGreatBritain());
+    }
+    
+    @GET
+    @Path("/one/{code}")
+    @Produces(MediaType.APPLICATION_JSON)
+      
+    public Transfer one(@PathParam("account") String rib) {
+      return TRANSFERS.get(rib);
+        
+        
+    }
+}

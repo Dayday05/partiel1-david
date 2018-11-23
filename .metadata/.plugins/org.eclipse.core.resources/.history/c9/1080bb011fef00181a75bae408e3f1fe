@@ -1,0 +1,23 @@
+package fr.formation.partiel1.entities;
+
+import java.util.*;
+
+@SuppressWarnings("javadoc")
+
+public class Rib {
+    
+    private String bankCode;
+    private String bankCounter;
+    private String accountNumber;
+    private String ribKey;
+    
+    public Rib(String bankCode, String bankCounter, String accountNumber, String ribKey) {
+	       
+	this.bankCode = bankCode;
+	this.bankCounter = bankCounter;
+	this.accountNumber = accountNumber;
+	this.ribKey = ribKey;
+    }
+    
+    
+}

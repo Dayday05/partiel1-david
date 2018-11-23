@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+/home/david/Workspace/java/partiel1/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+3769806568.index
+1045549186.index
+4241405549.index
+3943339752.index
+657909335.index
+3664160625.index
+1572198926.index

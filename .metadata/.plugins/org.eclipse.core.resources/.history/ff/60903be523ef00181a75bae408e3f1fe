@@ -1,0 +1,10 @@
+package fr.formation.partiel1.entities;
+
+import fr.formation.partiel1.entities.Account;
+import fr.formation.partiel1.entities.Rib;
+
+public class Transfer {
+    
+    String Account;
+    String rib;
+}

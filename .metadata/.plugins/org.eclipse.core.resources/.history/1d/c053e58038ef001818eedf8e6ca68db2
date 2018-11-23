@@ -1,0 +1,34 @@
+package fr.formation.partiel1.entities;
+
+import java.time.LocalDate;
+import java.util.Date;
+
+import fr.formation.partiel1.entities.Account;
+import fr.formation.partiel1.entities.Rib;
+
+
+@SuppressWarnings("javadoc")
+
+public class Transfer {
+    
+    private double sold;
+    private double amount;
+    private LocalDate date;
+        
+    public String getRib() {
+	return getRib();
+    }
+    
+    public String getAccount() {
+	return getAccount();
+    }
+    
+    public Transfer(double amount, double sold, LocalDate date) {
+	amount = this.amount;
+	sold = this.sold;
+	date = this.date;
+    }
+    
+    
+    
+}

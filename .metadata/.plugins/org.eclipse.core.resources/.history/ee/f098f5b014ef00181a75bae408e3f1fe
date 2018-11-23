@@ -1,0 +1,48 @@
+package fr.formation.partiel1.entities;
+
+import java.util.*;
+
+@SuppressWarnings("javadoc")
+public class Account {
+    
+    private int isoCode;
+    private int keyControl;
+    private List<Integer>rib = new ArrayList<>();
+    	
+    public Account(int isoCode, int keyControl, List<Integer> rib) {
+	this.isoCode = isoCode;
+	this.keyControl = keyControl;
+	this.rib = rib;
+    }
+    
+    public int getIsoCode() {
+        return isoCode;
+    }
+
+    
+    public int getKeyControl() {
+        return keyControl;
+    }
+
+    
+    public List<Integer> getRib() {
+        return rib;
+    }
+
+    private void setIsoCode(int isoCode) {
+        this.isoCode = isoCode;
+    }
+
+
+    
+    private void setKeyControl(int keyControl) {
+        this.keyControl = keyControl;
+    }
+
+
+    
+    private void setRib(List<Integer> rib) {
+        this.rib = rib;
+    }
+    
+}

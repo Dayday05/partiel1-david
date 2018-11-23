@@ -1,0 +1,35 @@
+package fr.formation.partiel1Controller;
+
+import java.util.*;
+
+import javax.ws.rs.*;
+import javax.ws.rs.core.*;
+
+import fr.formation.partiel1.entities.Account;
+import fr.formation.partiel1.entities.Rib;
+import fr.formation.partiel1.entities.Transfer;
+
+@SuppressWarnings("javadoc")
+@Path("/transfer")
+
+public class TransferController {
+
+    private final static Map<String, Account> TRANSFERS = new HashMap<>();
+    static {
+//	TRANSFERS.put("fr", buildFrance());
+//	TRANSFERS.put("gb", buildGreatBritain());
+    }
+    
+    @GET
+    @Path("/one/{code}")
+    @Produces(MediaType.APPLICATION_JSON)
+      
+    private static Account buildAccount1() {
+	   String isoCode = "France";
+	   String keyControl = "Paris";
+	   Account account = new Account(isoCode, keyControl);
+	   Rib ribInfo = new Rib("3002","00500","1253765476A","30");
+	   account.addRib(ribInfo);
+	   return account;
+	  }
+}

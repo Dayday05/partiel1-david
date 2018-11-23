@@ -1,0 +1,11 @@
+package fr.formation.partiel1.entities;
+
+import java.util.*;
+
+@SuppressWarnings("javadoc")
+public class Account {
+    	
+    private int isoCode;
+    private int keyControl;
+    private List rib;
+}

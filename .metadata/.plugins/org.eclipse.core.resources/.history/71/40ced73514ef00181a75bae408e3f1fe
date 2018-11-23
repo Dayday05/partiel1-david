@@ -1,0 +1,16 @@
+package fr.formation.partiel1.entities;
+
+import java.util.*;
+
+@SuppressWarnings("javadoc")
+public class Account {
+    	
+    public Account(int isoCode, int keyControl, List<Integer> rib) {
+	this.isoCode = isoCode;
+	this.keyControl = keyControl;
+	this.rib = rib;
+    }
+    private int isoCode;
+    private int keyControl;
+    private List<Integer>rib = new ArrayList<>();
+}

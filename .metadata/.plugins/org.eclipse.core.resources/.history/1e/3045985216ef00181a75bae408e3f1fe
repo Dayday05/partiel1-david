@@ -1,0 +1,12 @@
+package fr.formation.partiel1Controller;
+
+import java.util.*;
+
+import javax.ws.rs.*;
+
+@Path("/transfer")
+
+public class TransferController {
+    
+    
+}

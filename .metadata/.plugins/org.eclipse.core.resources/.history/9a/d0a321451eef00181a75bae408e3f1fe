@@ -1,0 +1,9 @@
+package fr.formation.partiel1.entities;
+
+import java.util.*;
+
+@SupressWarnings("javadoc")
+public class Rib {
+    
+    private String 
+}

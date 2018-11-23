@@ -1,0 +1,15 @@
+package fr.formation.partiel1.entities;
+
+import java.util.*;
+
+@SuppressWarnings("javadoc")
+
+public class Rib {
+    
+    private String bankCode;
+    private String bankCounter;
+    private String accountNumber;
+    private String ribKey;
+    
+    
+}

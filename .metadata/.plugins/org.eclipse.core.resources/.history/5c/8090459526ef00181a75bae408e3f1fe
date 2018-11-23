@@ -1,0 +1,19 @@
+package fr.formation.partiel1.entities;
+
+import fr.formation.partiel1.entities.Account;
+import fr.formation.partiel1.entities.Rib;
+
+
+@SuppressWarnings("javadoc")
+
+public class Transfer {
+    
+    
+    public String getRib() {
+	return getRib();
+    }
+    
+    public String getAccount() {
+	return getAccount();
+    }
+}

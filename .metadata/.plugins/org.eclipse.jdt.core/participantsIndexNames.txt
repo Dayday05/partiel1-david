@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+/home/david/Workspace/java/partiel1/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3344330178.index
+/ItSchoolPartiel1/src/main/resources

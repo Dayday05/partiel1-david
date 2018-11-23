@@ -1,0 +1,54 @@
+package fr.formation.partiel1.entities;
+
+import java.util.*;
+
+@SuppressWarnings("javadoc")
+public class Account {
+    
+    private String isoCode;
+    private String keyControl;
+    private List<Integer>rib = new ArrayList<>();
+    	
+    public Account(String isoCode, String keyControl, List<String> rib) {
+	this.isoCode = isoCode;
+	this.keyControl = keyControl;
+	this.rib = rib;
+    }
+    
+    public String getIsoCode() {
+        return isoCode;
+    }
+
+    
+    public String getKeyControl() {
+        return keyControl;
+    }
+
+    
+    public List<String> getRib() {
+        return rib;
+    }
+
+    private void setIsoCode(String isoCode) {
+	if(isoCode <= 0 ) {
+	    throw new IllegalArgumentException();
+	}
+        this.isoCode = isoCode;
+    }
+
+
+    
+    private void setKeyControl(String keyControl) {
+	if(keyControl <= 0 ) {
+	    throw new IllegalArgumentException();
+	}
+        this.keyControl = keyControl;
+    }
+
+
+    
+    private void setRib(List<String> rib) {
+        this.rib = rib;
+    }
+    
+}
