@@ -1,0 +1,10 @@
+$(function() {
+        $("#GETJSON").click(function(){
+            $.getJSON("http://localhost:8080/partiel1-david/api/transfer/money/buildTransferOne", function(data){
+              var content = "IsoCode =" + data.isoCode + ", KeyControl =" + data.keyControl + ", Rib =" + data.rib;
+              $( "<div/>", {
+                 html: content
+              }).appendTo( "body" );
+            });
+        });
+      });

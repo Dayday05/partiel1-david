@@ -1,0 +1,10 @@
+$(function() {
+		  var url = "http://localhost:8080/partiel1-louis/api/";
+			$.getJSON(url+"transfert/money", function(data){
+					var virement= "<tr><td>"+data.transmitter.iso+""+data.transmitter.controlKey+""+data.transmitter.currentRib.bankCode+""+data.transmitter.currentRib.ticketCode+""+data.transmitter.currentRib.accountNb+""+data.transmitter.currentRib.ribKey+"</td><td>"+data.receiver.iso+""+data.receiver.controlKey+""+data.receiver.currentRib.bankCode+""+data.receiver.currentRib.ticketCode+""+data.receiver.currentRib.accountNb+""+data.receiver.currentRib.ribKey+"</td><td>"+data.somme+" €</td><td>"+ data.currentTime.dayOfMonth +"/"+ data.currentTime.monthValue +"/"+ data.currentTime.year +" - "+ data.currentTime.hour +"h "+data.currentTime.minute+"</td><td>"+ data.currentTime.dayOfMonth +"/"+ data.currentTime.monthValue +"/"+ data.currentTime.year +" - "+ data.currentTime.hour +"h "+data.currentTime.minute+"</td></tr>";
+					else {
+					var virement= "<tr><td>"+data.transmitter.iso+""+data.transmitter.controlKey+""+data.transmitter.currentRib.bankCode+""+data.transmitter.currentRib.ticketCode+""+data.transmitter.currentRib.accountNb+""+data.transmitter.currentRib.ribKey+"</td><td>"+data.receiver.iso+""+data.receiver.controlKey+""+data.receiver.currentRib.bankCode+""+data.receiver.currentRib.ticketCode+""+data.receiver.currentRib.accountNb+""+data.receiver.currentRib.ribKey+"</td><td>"+data.somme+" €</td><td>"+ data.currentTime.dayOfMonth +"/"+ data.currentTime.monthValue +"/"+ data.currentTime.year +" - "+ data.currentTime.hour +"h "+data.currentTime.minute+"</td><td></td></tr>";	
+					}
+				$("#table").append(virement);
+			});
+		});	
