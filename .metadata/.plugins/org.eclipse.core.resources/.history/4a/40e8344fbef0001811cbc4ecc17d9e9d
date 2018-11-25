@@ -1,0 +1,32 @@
+package fr.formation.partiel1Controller;
+
+
+import java.time.LocalDateTime;
+import java.util.*;
+
+import javax.ws.rs.*;
+import javax.ws.rs.core.*;
+
+import fr.formation.partiel1.entities.Account;
+import fr.formation.partiel1.entities.Rib;
+import fr.formation.partiel1.entities.Transfer;
+
+@SuppressWarnings("javadoc")
+@Path("/transfer")
+
+public class TransferController {
+
+    private static Transfer buildTransferOne() {
+	
+	Rib ribA = new Rib("3002", "0050", "0000435432Z", "34");
+	Rib ribB = new Rib("2345", "0087", "4738948577A", "45");
+	
+	Account transmitter = new Account("FR", "45", ribA);
+	Account receiver = new Account("FR", "54", ribB);
+	
+	LocalDateTime currentTime = LocalDateTime.now();
+	
+	Transfer sold = new Transfer(100, receiver, transmitter, currentTime);
+	return sold;
+    }
+}

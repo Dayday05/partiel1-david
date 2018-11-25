@@ -9,11 +9,12 @@ public class Account {
     
     private String isoCode;
     private String keyControl;
-    private List<Rib> rib = new ArrayList<>();
+    private Rib rib;
     	
-    public Account(String isoCode, String keyControl) {
+    public Account(String isoCode, String keyControl, Rib rib) {
 	this.isoCode = isoCode;
 	this.keyControl = keyControl;
+	this.rib = rib;
     }
 
     public String getIsoCode() {
@@ -25,31 +26,25 @@ public class Account {
         return keyControl;
     }
     
-    public List<Rib> getRib() {
-	return Collections.unmodifiableList(rib);
+    public Rib getRib() {
+	return rib;
     }
-    
-    public boolean addRib (Rib ribInfo) {
-	    if(ribInfo == null) {
-		throw new NullPointerException();
-	    }
-	    return rib.add(ribInfo);
-}	
+   	
 
     private void setIsoCode(String isoCode) {
-	Objects.requireNonNull(isoCode);
+	Objects.requireNonNull(isoCode, "isoCode can't be null");
         this.isoCode = isoCode;
     }
 
 
     
     private void setKeyControl(String keyControl) {
-	Objects.requireNonNull(keyControl);
+	Objects.requireNonNull(keyControl, "keyControl can't be null");
         this.keyControl = keyControl;
     }
 
-
-    private void setRib(List<Rib> rib) {
+    
+    private void setRib(Rib rib) {
         this.rib = rib;
     }
     

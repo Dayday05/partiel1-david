@@ -1,0 +1,20 @@
+package fr.formation.partiel1.entities;
+
+import java.time.LocalDate;
+import java.util.Date;
+
+import fr.formation.partiel1.entities.Account;
+import fr.formation.partiel1.entities.Rib;
+import fr.formation.partiel1.entities.Account;
+import fr.formation.partiel1.entities.Account;
+@SuppressWarnings("javadoc")
+
+public class Transfer {
+    
+    private Account transmitter;
+    private Account receiver;
+
+
+  
+    
+}

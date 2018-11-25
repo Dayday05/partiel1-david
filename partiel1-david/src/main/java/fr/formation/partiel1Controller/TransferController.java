@@ -1,6 +1,7 @@
 package fr.formation.partiel1Controller;
 
 
+import java.time.LocalDateTime;
 import java.util.*;
 
 import javax.ws.rs.*;
@@ -11,40 +12,25 @@ import fr.formation.partiel1.entities.Rib;
 import fr.formation.partiel1.entities.Transfer;
 
 @SuppressWarnings("javadoc")
-@Path("/transfer")
+@Path("transfer")
 
 public class TransferController {
-
-    private final static Map<String, Account> TRANSFERS = new HashMap<>();
-    static {
-	TRANSFERS.put("accountOne", buildAccount1());
-	TRANSFERS.put("accountTwo", buildAccount2());
-    }
     
     @GET
-    @Path("/transferOne/{rib}")
+    @Path("money")
     @Produces(MediaType.APPLICATION_JSON)
-    
-    public Account one(@PathParam("rib") String rib) {
-	    return TRANSFERS.get(rib);
-	  }
-      
-    private static Account buildAccount1() {
-	   String isoCode = "FR";
-	   String keyControl = "36";
-	   Account account = new Account(isoCode, keyControl);
-	   Rib ribInfo = new Rib("3002","00500","1253765476A","30");
-	   account.addRib(ribInfo);
-	   return account;
-	   
-	  }
-    
-    private static Account buildAccount2() {
-	   String isoCode = "FR";
-	   String keyControl = "76";
-	   Account account = new Account(isoCode, keyControl);
-	   Rib ribInfo = new Rib("5675","00760","4398765498K","98");
-	   account.addRib(ribInfo);
-	   return account;
-	  }
+
+    private static Transfer buildTransferOne() {
+	
+	Rib ribA = new Rib("3002", "0050", "0000435432Z", "34");
+	Rib ribB = new Rib("2345", "0087", "4738948577A", "45");
+	
+	Account transmitter = new Account("FR", "45", ribA);
+	Account receiver = new Account("FR", "54", ribB);
+	
+	LocalDateTime currentTime = LocalDateTime.now();
+	
+	Transfer sold = new Transfer(100, receiver, transmitter, currentTime);
+	return sold;
+    }
 }

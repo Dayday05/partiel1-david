@@ -22,28 +22,30 @@ public class Rib {
     
     
     private void setBankCode(String bankCode) {
-	Objects.requireNonNull(bankCode);
+	Objects.requireNonNull(bankCode, "bankCode can't be null");
         this.bankCode = bankCode;
     }
 
 
     
     private void setBankCounter(String bankCounter) {
-	Objects.requireNonNull(bankCounter);
+	Objects.requireNonNull(bankCounter, "bankCounter can't be null");
         this.bankCounter = bankCounter;
     }
 
 
     
     private void setAccountNumber(String accountNumber) {
-	Objects.requireNonNull(accountNumber);
+	if(accountNumber.length() > 11) {
+	    throw new IllegalArgumentException("accountNumber can't have more or less than 11 characters");
+	}
         this.accountNumber = accountNumber;
     }
 
 
     
     private void setRibKey(String ribKey) {
-	Objects.requireNonNull(ribKey);
+	Objects.requireNonNull(ribKey, "ribKey can't be null");
         this.ribKey = ribKey;
     }
 
