@@ -17,10 +17,10 @@ import fr.formation.partiel1.entities.Transfer;
 public class TransferController {
     
     @GET
-    @Path("money")
+    @Path("all")
     @Produces(MediaType.APPLICATION_JSON)
 
-    private static Transfer buildTransferOne() {
+    public  Transfer buildTransferOne() {
 	
 	Rib ribA = new Rib("3002", "0050", "0000435432Z", "34");
 	Rib ribB = new Rib("2345", "0087", "4738948577A", "45");
